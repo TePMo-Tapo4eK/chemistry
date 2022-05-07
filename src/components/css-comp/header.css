@@ -1,0 +1,79 @@
+.header {
+    height: 120px;
+    width: 100%;
+    padding: 0 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    background-color: #7d3eda;
+    position: fixed;
+    top: -2px;
+    z-index: 999;
+    background: #7d3eda;
+    box-shadow:  28px 28px 57px #6a35b9,
+                -28px -28px 57px #9047fb;
+}
+.header_logo a{
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
+    margin-left: 40px;
+}
+.header ul{
+    display: flex;
+    align-items: baseline;
+    font-size: 18px;
+}
+
+.header a {
+    margin-right: 40px;
+}
+.header .link{
+    display: inline-block;
+    height: 55px;
+    display: flex;
+    align-items: center;
+}
+.link:hover{
+    margin-top: 3px;
+    border-bottom: 3px solid #9B60E5;
+}
+@media screen and (max-width: 1500px) {
+    .header .btn{
+        font-size: 15px;
+        border: 2px solid #9B60E5;
+    }
+    .header {
+        height: 80px;
+    }
+    .header_logo p{
+        font-weight: 600;
+        font-size: 20px
+    }
+}
+@media screen and (max-width: 905px) {
+    .header {padding: 0 80px;}
+}
+@media  screen and (max-width: 700px) {
+    .header {padding: 0 44px;}
+    .header .link{
+        font-size: 0;
+    }
+    .header .btn{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .header .btn{
+        font-size: 10px;
+        border: 2px solid #9B60E5;
+    }
+    .header {
+        height: 100px;
+    }
+    .header_logo{
+        font-weight: 600;
+        font-size: 30px
+    }
+}
