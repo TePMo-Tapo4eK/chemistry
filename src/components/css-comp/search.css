@@ -53,7 +53,7 @@
              -35px -35px 70px #9249ff;
 }
 .search-result {
-    padding-left: 10px;
+    padding: 0 20px 0 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,5 +65,6 @@
     .search-content{
         width: 92%;
         height: 13%;
+        border-radius: 30px;
     }
 }
