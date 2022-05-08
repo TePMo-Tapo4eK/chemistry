@@ -2,10 +2,7 @@ import React, { useState } from "react";
 import './components/css-comp/search.css'
 
 const Search = () => {
-    const [el1, setEl1] = useState('H')
-    const [el2, setEl2] = useState('O2')
-    const [res, setRes] = useState('H2O')
-    const [inp, setInp] = useState({inp1: "", inp2: ""})
+    
 
     const reactMassive = [
         //Шаблон
@@ -15,7 +12,7 @@ const Search = () => {
         // ----------------
 
         //H - Водород
-
+        {el: 'error', el2: 'error', res: 'Error'},
         {el1: 'H2SO4', el2: '2NaOH', res: 'Na2SO4'},
         {el1: '2H', el2: '2OH', res: '2H2O'},
         {el1: 'H', el2: 'OH', res: 'H2O'},
@@ -232,14 +229,22 @@ const Search = () => {
         //lr
     ]
 
+    const [el1, setEl1] = useState('H')
+    const [el2, setEl2] = useState('OH')
+    const [res, setRes] = useState('H2O')
+    const [inp, setInp] = useState({inp1: "", inp2: ""})
+
     let FindItemST = reactMassive.find(function(item) {
-        return (item.el1 === inp.inp1 && item.el2 === inp.inp2) || (item.el2 === inp.inp2 && item.res === inp.res) || (item.el1 === inp.inp1 && item.res === inp.res)
+        if(item.el1 === inp.inp1 && item.el2 === inp.inp2) {
+            return (item.el1 === inp.inp1 && item.el2 === inp.inp2) || (item.el2 === inp.inp2 && item.res === inp.res) || (item.el1 === inp.inp1 && item.res === inp.res)
+        }
     })
 
     const Finditem = () => {
-        setEl1(el1 => FindItemST.el1)
-        setEl2(el2 => FindItemST.el2)
-        setRes(res => FindItemST.res)
+        if (FindItemST.el1 === inp.inp1 && FindItemST.el2 === inp.inp2) {
+        setEl1(el1 => el1 = FindItemST.el1)
+        setEl2(el2 => el2 = FindItemST.el2)
+        setRes(res => res = FindItemST.res)}
     }
 
 
