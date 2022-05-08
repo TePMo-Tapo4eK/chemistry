@@ -9,6 +9,7 @@
 }
 .search-content {
     margin-top: 80px;
+    overflow: hidden;
     padding: 0px;
     width: 70%;
     height: 20%;
@@ -52,10 +53,17 @@
              -35px -35px 70px #9249ff;
 }
 .search-result {
+    padding-left: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     min-width: 50%;
     height: 80%;
     font-size: 5vw;
+}
+@media screen and (max-width: 500px) {
+    .search-content{
+        width: 92%;
+        height: 13%;
+    }
 }
